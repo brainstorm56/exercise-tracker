@@ -162,6 +162,7 @@ app.get('/api/users/:_id/logs',async (req,res)=>{
 
 
 // get a list of all users with GET
+
 app.get('/api/users',async(req,res)=>{
   const userArray = await User.find({});
   res.json(userArray);
@@ -200,6 +201,7 @@ app.post('/api/users/:_id/exercises',async (req,res)=>{
   }
 })
 
+// get request at root
 
 app.get('/', (req, res) => {
   res.sendFile(process.cwd() + '/views/index.html')
